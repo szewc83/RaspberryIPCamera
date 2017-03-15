@@ -108,6 +108,8 @@ cd v4l2rtspserver
 cmake . && make
 sudo make install
 
+sudo sed -i "s/\/usr\/local\/bin\/h264_v4l2_rtspserver/\/usr\/local\/bin\/v4l2rtspserver/g" /home/pi/RaspberryIPCamera/DefaultConfigFiles/RTSP-Server.service
+
 # Put system service file for RTSP server into place
 sudo cp /home/pi/RaspberryIPCamera/DefaultConfigFiles/RTSP-Server.service /etc/systemd/system/RTSP-Server.service
 # Notify systemd of a service installation.
